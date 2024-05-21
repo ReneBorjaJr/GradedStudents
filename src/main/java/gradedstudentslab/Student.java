@@ -10,12 +10,12 @@ public class Student {
     public Student(String firstName, String lastName, ArrayList<Double> examScores) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.examScores = new ArrayList<>();
         for (double score : examScores) {
-            if (score < 0 || score > 100) {
-                return;
+            if (score >= 0 && score <= 100) {
+                this.examScores.add(score);
             }
         }
-        this.examScores = examScores;
     }
 
     public String getLastName() {
