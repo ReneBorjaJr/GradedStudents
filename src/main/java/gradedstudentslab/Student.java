@@ -10,6 +10,11 @@ public class Student {
     public Student(String firstName, String lastName, ArrayList<Double> examScores) {
         this.firstName = firstName;
         this.lastName = lastName;
+        for (double score : examScores) {
+            if (score < 0 || score > 100) {
+                return;
+            }
+        }
         this.examScores = examScores;
     }
 

@@ -42,10 +42,10 @@ class StudentTest {
     void testSetExamScores_NonNullList() {
         ArrayList<Double> examScores = new ArrayList<>();
         examScores.add(100.0);
-        examScores.add(200.0);
-        examScores.add(300.0);
+        examScores.add(80.0);
+        examScores.add(68.0);
         student.setExamScores(examScores);
-        String expected = "> Exam Scores:\n\tExam 1 -> 100.0\n\tExam 2 -> 200.0\n\tExam 3 -> 300.0\n";
+        String expected = "> Exam Scores:\n\tExam 1 -> 100.0\n\tExam 2 -> 80.0\n\tExam 3 -> 68.0\n";
         assertEquals(expected, student.getExamScores());
     }
 
